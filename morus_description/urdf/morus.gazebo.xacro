@@ -44,6 +44,7 @@
   </gazebo>
   
   <!-- Start publishing battery status msgs-->
+  
   <gazebo>
     <plugin filename="libmorus_gazebo_battery_status.so" name="battery_status_11">
       <batteryID> 11 </batteryID>
@@ -64,8 +65,7 @@
       <batteryID> 14 </batteryID>
     </plugin>
   </gazebo>
-  <!-- Start publishing GM status msgs-->
-    <gazebo>
+  <!-- Start publishing GM status msgs    <gazebo>
     <plugin filename="libmorus_gazebo_gm_status.so" name="gm_status_1">
       <gmID> 1 </gmID>
       <linkName>rotor_0</linkName>
@@ -96,7 +96,7 @@
       <jointName>rotor_3_joint</jointName>
       <motorConstant>0.000456874</motorConstant>
     </plugin>
-  </gazebo>
+  </gazebo>-->
   
   <!-- Mount first generic pose sensor-->
   <xacro:odometry_plugin_macro

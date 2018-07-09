@@ -256,10 +256,19 @@ class AngleTiltCtl:
                                                                         self.pose_mv.y, self.pose_sp.y,
                                                                         self.pose_mv.z,  self.pose_sp.z))
 
-            motor_speed_1 = self.hover_speed + domega_z + dwz - dwy
-            motor_speed_2 = self.hover_speed + domega_z - dwz #+ dwx
-            motor_speed_3 = self.hover_speed + domega_z + dwz + dwy
-            motor_speed_4 = self.hover_speed + domega_z - dwz #- dwx
+
+
+            samples_0 = numpy.random.normal(self.hoover_speed, 5, size=50000)
+            samples_1 = numpy.random.normal(self.hoover_speed, 5, size=50000)
+            samples_2 = numpy.random.normal(self.hoover_speed, 5, size=50000)
+            samples_3 = numpy.random.normal(self.hoover_speed, 5, size=50000)
+
+
+
+            #motor_speed_1 = self.hover_speed + domega_z + dwz - dwy
+            #motor_speed_2 = self.hover_speed + domega_z - dwz #+ dwx
+            #motor_speed_3 = self.hover_speed + domega_z + dwz + dwy
+            #motor_speed_4 = self.hover_speed + domega_z - dwz #- dwx
             print(motor_speed_1, motor_speed_2, motor_speed_3, motor_speed_4)
             #print(self.z_sp, self.z_mv)
 
